@@ -1,0 +1,12 @@
+services:
+  mobsf:
+    image: opensecurity/mobile-security-framework-mobsf:latest
+    container_name: detekta-mobsf
+    ports:
+      - "8008:8000"
+    environment:
+      - MOBSF_API_KEY=7282a5146c9861e687a7183e29f8f4a13eaf72e909562ac1e88e8940c6c729c1
+    restart: always
+    # Uncomment and adjust if you need a persistent workspace
+    # volumes:
+    #   - ./mobsf_data:/home/mobsf/.MobSF
